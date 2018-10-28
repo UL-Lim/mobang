@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head>
+	<title>space</title>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:800,900|Song+Myung');
+		body{ perspective:1000px; cursor:none; background-image:url("img/co.gif")}
+		
+		.text_blur{color:transparent;text-shadow: 0 0 7px rgba(255,255,255,0.9)}		
+		.stars{padding: 10px; border-color:rgba(0,255,150,0.50); border-style:groove}
+		#div1{width:330px; position: absolute; color:rgba(255,255,255); font-family: 'Song Myung', serif; z-index:1; animation: r1 1s linear forwards;}
+		div{display: block; position: absolute; color:rgba(0,255,150,0.70); font-family: 'Song Myung', serif; animation: r 1s infinite alternate;}
+		
+		img{display: block; position: absolute; sanimation: r1 1s linear forwards;}
+		
+		
+
+		@keyframes r { to{ transform: translate3d(0,0,500px);color:rgba(0,255,150,0.50);border-color:rgba(0,255,150,0.50);}
+			from{ transform: translate3d(0,0,499px);color:rgba(0,150,255,0.50);border-color:rgba(0,150,255,0.50);}
+
+
+	</style>
+</head>
+<body style="height: 494px; perspective-origin: 957px 173px;">
+
+
+	<script>
+	document.body.style.height = window.innerHeight + "px";
+	setInterval(star,1000);
+	function star(){
+		var a = document.createElement("div");
+		a.style.left = randomBH(0, window.innerWidth) + "px";
+		a.style.top = randomBH(30, (window.innerHeight)) + "px";
+		a.src = "img/" + randomBH(1,4) + ".png";
+		a.addEventListener("animationend", function(e){ 
+			e.target.parentNode.removeChild(e.target);
+		});
+		document.body.appendChild(a);
+	}
+		
+	function randomBH(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	window.onmousemove = function(e){
+		document.body.style.perspectiveOrigin = e.clientX + "px " + e.clientY+"px";
+	}
+
+	</script>
+	
+	<img src="img/man.jpg" style="width:400px; height:auto; top:40px; left:110px;">
+	
+	
+<svg version="1.2" baseProfile="tiny" class="draw"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 841.9 595.3"
+	 xml:space="preserve">
+<path fill="none" stroke="white" stroke-miterlimit="10" d="M447.9,305.6c0,0,174.9,77.8,288.1,0c0,0-148.6,76.7-290,2.2
+	c0,0,135.5,81.9,287.8-4.8c0,0-38,29.2-138.4,34.9c0,0-5.9,151.4,0,169.6c0,0-1.6-161.4-2.6-169.6c0,0-3.9,118.4-3.6,144
+	c0,0,5.3-64.7,8.2-71.4c0,0,182-8.9,191.2-7.1c0,0-97.4,3.7-193.2,6.7c-86.2,2.7-171.2,4.7-182.9,2.9c0,0,362.2-5.7,373.9-5.7
+	c0,0-356.9-0.7-367.9,1.4c0,0,358.7,1.4,362.2,1.1c0,0-188.6,1-189,1.8c-0.4,0.8-3.8,89.6-0.1,92.8c0,0,99.2-1.6,142.9,19.7
+	c0,0-187.7-51.7-290.6,0c0,0,160-66.1,289-6.9c0,0-202.6-50.7-279.9,6.9c0,0,132-42.8,251.3-12.7c21.6,5.4,44.5-0.5,60.7-15.8
+	c38.8-36.6,88.3-110.2-10.8-195.5c-141.8-122.1-310.8,4.4-313,5.9c-4.4,3-151.4,143.4-5.3,225.5s372.2,10.7,370-74.6
+	c-2.1-85.3-69.2-191.2-172.8-194.1s-239.9,35.7-245.8,163.7S552.2,571,605,571.5c52.8,0.5,244.7-20.3,201-179.1
+	c-1.7-6.3-3.7-12.3-5.9-18.2C747.5,233.3,569,232.9,458.4,298c-115.2,67.7-125.8,234.6,65,270.9s310.8-66,278.3-168.7
+	S657.1,256.5,604,259.6c-53.1,3.1-9.1,308.7-8.6,314c0,0-31.4-268.2,2.7-307.1c0,0-36.8,223.9-9.1,297.5c0,0-12.8-286.9,16.5-312.4
+	c0,0-34.7,191.9-5.3,313.5c0,0,0.5-307.8-1.1-313"/>
+	</svg>
+
+	<div style="left: 675px; top: 220px;"><h2>Small Asteroid or Comet 'Visits' from Beyond the Solar System</h2><br>The team from the Pan-STARRS observatory that was the first to detect the interstellar visitor has chosen the name ‘Oumuamua for their discovery.  The name is of Hawaiian origin and means a messenger from afar arriving first. Being the first known object of its type, the object also became the first to receive a new series designation from the International Astronomical Union (IAU), which assigns designations to astronomical objects. The IAU has announced the permanent designation of the interstellar object is “1I/2017 U1.” In this first-of-its-kind IAU designation, the "I" stands for interstellar.
+
+A small, recently discovered asteroid -- or perhaps a comet -- appears to have originated from outside the solar system, coming from somewhere else in our galaxy. If so, it would be the first "interstellar object" to be observed and confirmed by astronomers.
+
+This unusual object – for now designated A/2017 U1 – is less than a quarter-mile (400 meters) in diameter and is moving remarkably fast. Astronomers are urgently working to point telescopes around the world and in space at this notable object. Once these data are obtained and analyzed, astronomers may know more about the origin and possibly composition of the object.
+
+A/2017 U1 was discovered Oct. 19 by the University of Hawaii's Pan-STARRS 1 telescope on Haleakala, Hawaii, during the course of its nightly search for near-Earth objects for NASA. Rob Weryk, a postdoctoral researcher at the University of Hawaii Institute for Astronomy (IfA), was first to identify the moving object and submit it to the Minor Planet Center. Weryk subsequently searched the Pan-STARRS image archive and found it also was in images taken the previous night, but was not initially identified by the moving object processing. </div>
+	
+<div style="left: 67px; top: 380px;">asda</div>
+	
+<div style="width:300px; left: 10px; top: 20px;">
+
+"We have been waiting for this day for decades," said CNEOS Manager Paul Chodas. "It's long been theorized that such objects exist -- asteroids or comets moving around between the stars and occasionally passing through our solar system -- but this is the first such detection. So far, everything indicates this is likely an interstellar object, but more data would help to confirm it."
+
+The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS) is a wide-field survey observatory operated by the University of Hawaii Institute for Astronomy. The Minor Planet Center is hosted by the Harvard-Smithsonian Center for Astrophysics and is a sub-node of NASA's Planetary Data System Small Bodies Node at the University of Maryland (http://www.minorplanetcenter.net/ ). JPL hosts the Center for Near-Earth Object Studies (CNEOS). All are projects of NASA's Near-Earth Object Observations Program, and elements of the agency's Planetary Defense Coordination Office within NASA's Science Mission Directorate.</div>
+	<div style="left: 640px; top: 60px;" class="stars">Betelgeuse<br>HR 2061, BD +7° 1055<br>AAVSO 0549+07</div>
+	<div style="left: 1350px; top: 150px;" class="stars">Altair<br>HR 7557, BD+08°4236<br>WDS 19508+0852A</div>
+	<div style="left: 400px; top: 390px;" class="stars">Deneb<br>HR 7924, BD +44°3541<br>SAO 49941</div>
+	<div style="left: 160px; top: 620px;" class="stars">Deneb<br>HR 7924, BD +44°3541<br>SAO 49941</div>
+	
+<div id="div1" style="left:1150px; top: 10px;"><h2>2018년 10월 27일 오후 12시 16분 서울특별시 <span class="text_blur">노원</span>구 <span class="text_blur">공릉</span>동 <span class="text_blur">172</span>번지</h2>저는 그 날 그 곳서 너무나도 베끼고 싶은 무언가를 발견했읍니다. 언젠가는 꼭 만들고야 말겠다고 생각만 했던 <span class="text_blur">그 우주</span>를, 그는 만들었지요. 그런데 이미 어떤 이가 그의 <span class="text_blur">우주</span>를 완벽히 베끼고야 말았읍니다. 또한 저는 전혀 다른 시간과 공간 속에서 그와 똑같이 생긴 <span class="text_blur">우주</span>를 만들었던 다른 <span class="text_blur">여성</span>을 떠올렸지요. 그런 <span class="text_blur">우주</span>를 탐낸 저는 그 자리에 주저앉아 엉엉 울고 말았습니다만, 문득 정신을 차려보니, 그 곳에는 <span class="text_blur">탐스러운 우주</span>를 베껴 담은 책 한 권, 그리고 아무 것도 없었읍니다.</div>
+	</body></html>
